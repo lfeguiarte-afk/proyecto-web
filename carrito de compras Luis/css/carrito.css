@@ -1,0 +1,119 @@
+/* Animaciones de agregado/eliminado */
+.agregado {
+  background-color: #e6ffed !important; 
+  color: #1b5e20 !important;
+  animation: fade 1s ease-in-out;
+}
+
+.eliminado {
+  background-color: #ffe6e6 !important;
+  color: #c62828 !important;
+  animation: fade 1s ease-in-out;
+}
+
+@keyframes fade {
+  from { opacity: 0.3; }
+  to { opacity: 1; }
+}
+
+/* General */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fafafa;
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  height: 55vh;
+  background-image: url('../img/principal.jpg.avif');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.45);
+  border-radius: 0 0 20px 20px;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Títulos */
+h1, h5 {
+  font-weight: 600;
+  color: #333;
+}
+
+h1.text-center {
+  margin-bottom: 30px;
+  font-size: 2.2rem;
+}
+
+/* Cards de productos */
+.card {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.card img {
+  border-radius: 15px 15px 0 0;
+  object-fit: cover;
+  height: 200px;
+}
+
+/* Botones */
+.btn-success {
+  background: linear-gradient(135deg, #ff7eb3, #ff758c);
+  border: none;
+  font-weight: 500;
+  border-radius: 10px;
+}
+
+.btn-success:hover {
+  background: linear-gradient(135deg, #ff5c9a, #ff4f81);
+}
+
+.btn-danger {
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+/* Carrito */
+.card-header {
+  font-weight: bold;
+  border-radius: 15px 15px 0 0 !important;
+}
+
+.card-footer {
+  border-top: none;
+}
+
+/* Offcanvas */
+.offcanvas {
+  border-radius: 15px 0 0 15px;
+}
+
+.offcanvas-end {
+  border-radius: 0 15px 15px 0;
+}
